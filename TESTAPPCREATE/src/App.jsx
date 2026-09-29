@@ -1,0 +1,12 @@
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout'
+import Admin from './pages/Admin'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import ProductDetails from './pages/ProductDetails'
+import Products from './pages/Products'
+import Profile from './pages/Profile'
+import Wishlist from './pages/Wishlist'
+export default function App(){return <Routes><Route element={<Layout/>}><Route path="/" element={<Home/>}/><Route path="/products" element={<Products/>}/><Route path="/product/:id" element={<ProductDetails/>}/><Route path="/cart" element={<Cart/>}/><Route path="/wishlist" element={<Wishlist/>}/><Route path="/checkout" element={<Checkout/>}/><Route path="/profile" element={<Profile/>}/><Route path="/admin" element={<Admin/>}/><Route path="*" element={<NotFound/>}/></Route></Routes>}
