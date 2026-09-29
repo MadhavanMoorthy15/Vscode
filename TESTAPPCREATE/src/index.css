@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  color: #111827;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.dark body,
+html.dark body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* dark mode class is toggled on <html> but most screens still use light utilities */
+html.dark .bg-white {
+  background-color: #ffffff;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
